@@ -558,21 +558,25 @@ namespace _22
             //Input: Word Output: Word
             //Note : 
             //Check the Split Function(Member in String Class) Output will be a Single Console.WriteLine Statement
-            //Console.WriteLine("please enter words");
-            //string word = Console.ReadLine();
+            Console.WriteLine("please enter words");
+            string word = Console.ReadLine();
+          string[] words=word.Split(' ');
 
-            //char reversed;
-            //string rev=null;
-            //word.Split(' ');
-            //for (int i = word.Length-1; i >=0; i--)
-            //{
+            string rev = null;
+            for (int i = words.Length - 1; i >= 0; i--)
+            {
 
-            //    reversed = word[i];
-            //    rev += reversed.ToString();
+                rev += words[i];
+                if (i > 0)
+                {
+                    rev += " "; // Add space between words
+                }
+
+            }
+            Console.WriteLine(rev);
+        
 
 
-            //}
-            //Console.WriteLine(rev.ToString());
             #endregion
 
 
@@ -592,7 +596,7 @@ namespace _22
             //    for (int j = 0; j < arr1.GetLength(1); j++)
             //    {
 
-                
+
             //        arr1[i,j] = int.Parse(Console.ReadLine());
             //    }
             //}
@@ -621,7 +625,7 @@ namespace _22
             //        Console.WriteLine(arr2[i,j]);
             //    }
             //}
-           
+
             #endregion
 
 
